@@ -10,4 +10,9 @@ class AppSpec extends AnyFlatSpec with Matchers with OptionValues {
     val result = app.doSomething("Me")
     result.value should equal ("Cool")
   }
+  "An App" should "know you" in {
+    val app = new App
+    val result = app.doSomething("You")
+    result.value should equal ("Fool")
+  }
 }
